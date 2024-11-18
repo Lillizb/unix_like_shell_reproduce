@@ -1,0 +1,107 @@
+ **Function**         	 **Library**               	 			**Explanation**
+ `readline`           	 `<readline/readline.h>`   	 			Reads a line of input from the user, often with editing features.
+
+ `rl_clear_history`   	 `<readline/readline.h>`   	 			Clears the history of input lines.
+
+ `rl_on_new_line`     	 `<readline/readline.h>`   	 			Updates the state to reflect that a new line has started.
+
+ `rl_replace_line`    	 `<readline/readline.h>`   	 			Replaces the current line with a new one.
+
+ `rl_redisplay`       	 `<readline/readline.h>`   	 			Redisplays the current input line after changes.
+
+ `add_history`        	 `<readline/history.h>`    	 			Adds a line to the history of input lines.
+
+ `printf`             	 `<stdio.h>`               	 			Prints formatted output to the standard output.
+
+ `malloc`             	 `<stdlib.h>`              	 			Allocates a block of memory dynamically on the heap.
+
+ `free`               	 `<stdlib.h>`              	 			Frees a block of memory previously allocated by `malloc`.
+
+ `write`              	 `<unistd.h>`              	 			Writes data to a file descriptor, such as a file or socket.
+
+ `access`             	 `<unistd.h>`              	 			Checks the accessibility of a file (existence, read/write permissions).
+
+ `open`               	 `<fcntl.h>` / `<sys/stat.h>` /			Opens a file and returns a file descriptor.
+ 						 `<sys/types.h>`
+
+ `read`               	 `<unistd.h>`              	 			Reads data from a file descriptor into a buffer.
+
+ `close`              	 `<unistd.h>`              	 			Closes an open file descriptor.
+
+ `fork`               	 `<unistd.h>`              	 			Creates a new process by duplicating the calling process.
+
+ `wait`               	 `<sys/wait.h>`            	 			Waits for a child process to finish executing.
+
+ `waitpid`            	 `<sys/wait.h>`            	 			Waits for a specific child process to finish.
+
+ `wait3`              	 `<sys/wait.h>`            	 			Similar to `wait`, but also returns resource usage information.
+
+ `wait4`              	 `<sys/wait.h>`            	 			Similar to `waitpid`, but also returns resource usage information.
+
+ `signal`             	 `<signal.h>`              	 			Sets a signal handler for a specific signal (e.g., `SIGINT`).
+
+ `sigaction`          	 `<signal.h>`              	 			Advanced way to set a signal handler with additional options.
+
+ `sigemptyset`        	 `<signal.h>`              	 			Initializes a signal set to be empty.
+
+ `sigaddset`          	 `<signal.h>`              	 			Adds a signal to a signal set.
+
+ `kill`               	 `<signal.h>`              	 			Sends a signal to a process, typically to terminate it.
+
+ `exit`               	 `<stdlib.h>`              	 			Terminates the calling process with a specified exit status.
+
+ `getcwd`             	 `<unistd.h>`              	 			Gets the current working directory.
+
+ `chdir`              	 `<unistd.h>`              	 			Changes the current working directory.
+
+ `stat`               	 `<sys/stat.h>`            	 			Retrieves information about a file (e.g., size, permissions).
+
+ `lstat`              	 `<sys/stat.h>`            	 			Similar to `stat`, but works with symbolic links.
+
+ `fstat`              	 `<sys/stat.h>`            	 			Similar to `stat`, but works with file descriptors.
+
+ `unlink`             	 `<unistd.h>`              	 			Deletes a file.
+
+ `execve`             	 `<unistd.h>`              	 			Replaces the current process image with a new one (used to run a new program).
+
+ `dup`                	 `<unistd.h>`              	 			Duplicates a file descriptor.
+
+ `dup2`               	 `<unistd.h>`              	 			Duplicates a file descriptor to a specific descriptor number.
+
+ `pipe`               	 `<unistd.h>`              	 			Creates a pair of file descriptors for interprocess communication.
+
+ `opendir`            	 `<dirent.h>`              	 			Opens a directory stream to read directory entries.
+
+ `readdir`            	 `<dirent.h>`              	 			Reads the next entry in a directory stream.
+
+ `closedir`           	 `<dirent.h>`              	 			Closes an open directory stream.
+
+ `strerror`           	 `<string.h>`              	 			Returns a string describing an error code (e.g., from `errno`).
+
+ `perror`             	 `<stdio.h>`               	 			Prints a descriptive error message to standard error.
+
+ `isatty`             	 `<unistd.h>`              	 			Checks if a file descriptor refers to a terminal.
+
+ `ttyname`            	 `<unistd.h>`              	 			Returns the name of the terminal associated with a file descriptor.
+
+ `ttyslot`            	 `<unistd.h>`              	 			Returns the slot number for the current user's terminal.
+
+ `ioctl`              	 `<sys/ioctl.h>`           	 			Performs a control operation on a file descriptor (often used with devices).
+
+ `getenv`             	 `<stdlib.h>`              	 			Retrieves the value of an environment variable.
+
+n	-		`tcsetattr`          	 `<termios.h>`             	 			Sets terminal attributes (like input mode).
+o	|
+t	|		`tcgetattr`          	 `<termios.h>`             	 			Gets terminal attributes.
+	|
+n	|		`tgetent`            	 `<curses.h>` / `<term.h>` 	 			Loads the terminal entry from the termcap database.
+e	|
+e	|		`tgetflag`           	 `<curses.h>` / `<term.h>` 	 			Gets a boolean flag from the termcap entry.
+d	|
+e	|		`tgetnum`            	 `<curses.h>` / `<term.h>` 	 			Gets a numeric value from the termcap entry.
+d	|
+	|		`tgetstr`            	 `<curses.h>` / `<term.h>` 	 			Gets a string value from the termcap entry.
+	|
+	|		`tgoto`              	 `<curses.h>` / `<term.h>` 	 			Generates a cursor movement string based on the termcap entry.
+	|
+	-		`tputs`              	 `<curses.h>` / `<term.h>` 	 			Outputs a termcap string with padding.
